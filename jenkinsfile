@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('download directoy') {
+            steps {
+                git 'https://github.com/vaadin/addressbook'
+            }
+        }
+        stage('compile directoy') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+                stage('test directoy') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+                stage('package directoy') {
+            steps {
+                sh 'mvn build'
+            }
+        }
+    }
+}
