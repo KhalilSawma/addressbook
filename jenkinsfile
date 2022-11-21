@@ -17,5 +17,10 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('test directoy') {
+            steps {
+                sh 'mvn package'
+            }
+        }
     }
 }
