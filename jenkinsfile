@@ -17,10 +17,5 @@ pipeline {
                 sh 'mvn test'
             }
         }
-                stage('package directoy') {
-            steps {
-                sh 'mvn build'
-            }
-        }
     }
 }
