@@ -17,7 +17,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('test directoy') {
+        stage('package directoy') {
             steps {
                 sh 'mvn package'
             }
